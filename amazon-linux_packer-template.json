@@ -1,5 +1,3 @@
-sing the value of the aws_ami_name variable as the AMI name.
-
 {
     "variables": {
         "aws_region": "{{env `AWS_REGION`}}",
@@ -8,6 +6,8 @@ sing the value of the aws_ami_name variable as the AMI name.
 
     "builders": [{
         "type": "amazon-ebs",
+        "vpc_id": "vpc-021310c728a97cd05",
+        "subnet_id": "subnet-06f97f69caa8e42e2",
         "region": "{{user `aws_region`}}",
         "instance_type": "t2.micro",
         "ssh_username": "ec2-user",
