@@ -18,8 +18,9 @@ phases:
       - echo "Configuring AWS credentials"
       - curl -qL -o aws_credentials.json http://169.254.170.2/$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI > aws_credentials.json
       - aws configure set region $AWS_REGION
-      - export AWS_ACCESS_KEY_ID="AKIA3JPFBGJ373WZAN7O"
-      - export AWS_SECRET_ACCESS_KEY="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"
+      - export AWS_ACCESS_KEY_ID="ASIA3JPFBGJ3S6CAIN5X"
+      - export AWS_SECRET_ACCESS_KEY="ZuOMfbXdJgjgSono4y53F/5Y9Y3y+iaTE+ngjDN1"
+      - export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjELL//////////wEaCXVzLWVhc3QtMSJIMEYCIQDyPK9zQgMrq2CfdIb4vCsv26xmIfgWuPwDOgZ/eY6dAQIhANf4IY9NAn9N/lR0s1vV0FcoaCdVt/TOQRHe7cXcqiu+KocDCEsQABoMNzc2MjU4Nzk0MTAzIgy60sYEygej/zjXr5Mq5AJTjl/hGbXGKkEEoRf7Da0qpGKaOwGHE4GX0olmZ+FLXBlekxNEHx3eCNiexl7nn+mLZFbhXaKX93m1ZigTmWvP/mSTiJk2tbWDp3GLSgBP6qgcBUyxwUAyM4AONT8ApGQc56K1pDzZOUWSwcw6D7k+1D2Na0KmtudBuX/U8mWhKXEI7N0CaZxDDr8DLQl7kSZOaBH24q4OnxTvNSiDG+KWWtZ8PqJGm5r30CHaxZnGDyh7KlDH3PPL+y+VLsaZtvt8JCh1ww0F4FRUMmRqEDsUOYrwsCtGGfHTjNI/6vpNBUFqdLnIRyQJai1OTjeeE6W5KK3pNQA5rgfTJ2ZY2IBmIge1gSg1UPubsuz3qF2UrmcljN1QjO0yao2NjrMHxnAnrfDqzb1bMSVnkCz+wMVygnmcqMQ/jTSXA1rVNyPkoJrOXmgD2XGRUNGExdDh8c+mxbpxGbp4O8MPdbYlHK+0gFaGZjCS4LmfBjqlAf7LOoPO0fFxpADlxBTgHw3bFDT4JHvLaX2qhGLscHtzJeYHcwxkHyD2YhhnSPbTRHf7IU3D6ly8qWIM3uAGUlvgu7rMgM3sFR3hxmIFzICf5OD3KKe9Mdr3u2nHcF/Ic4BvwaXWvWJs6Ec/5njlR+QTWpLl3OviT5a+pq7du5bpY5yky9V2TIzpt6Wbu7858H1q7Xp/DvlEoqU1Tv8ZZn/oPqyzWA=="
       - echo "Building HashiCorp Packer template, amazon-linux_packer-template.json"
       - ./packer build amazon-linux_packer-template.json
   post_build:
