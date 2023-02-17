@@ -1,6 +1,10 @@
 ---
 version: 0.2
 
+env: 
+  secrets-manager:
+    SECRET_VALUE: "arn:aws:secretsmanager:us-east-1:776258794103:secret:codebuild_secrets-8eMlUW"
+
 phases:
   pre_build:
     commands:
